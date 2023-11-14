@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const CartWidget = () => {
     return (
-        <div className='cartWidget'>
+        <div>
             <a> < FiShoppingCart size='40px'  /> </a>
         </div>
     )
