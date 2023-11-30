@@ -38,7 +38,6 @@ footer{
     background-color: black;
     color: white;
     padding: 10px;
-
 }
 
 .footer div div h2 {
@@ -48,10 +47,9 @@ footer{
 }
 
 .itemListContainer {
-    height: 700px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 

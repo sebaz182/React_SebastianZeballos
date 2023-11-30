@@ -3,20 +3,22 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 
 
-const NavBar = () => {
+function NavBar() {
     return (
         <header className='sticky-top'>
             <Navbar bg="black" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home"> <Logo/> </Navbar.Brand>
+                    <Navbar.Brand to="/"> <Logo/> </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#computadoras">Computadoras</Nav.Link>
-                        <Nav.Link href="#notebooks">Notebooks</Nav.Link>
-                        <Nav.Link href="#celulares">Celulares</Nav.Link>
-                        <Nav.Link> < CartWidget/> </Nav.Link>
+                        <Link to="/">Home</Link>
+                        <Link to="/computadoras">Computadoras</Link>
+                        <Link to="/notebooks">Notebooks</Link>
+                        <Link to="/celulares">Celulares</Link>
+                        <Link to="/cart"> < CartWidget/> </Link>
                     </Nav>
                 </Container>
             </Navbar>
