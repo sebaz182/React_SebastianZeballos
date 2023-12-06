@@ -3,27 +3,25 @@ import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import Footer from './Components/Footer';
 import { BrowserRouter, Routes ,Route} from 'react-router-dom';
-import Celulares from './Components/Celulares';
-import Computadoras from './Components/Computadoras';
-import Notebooks from './Components/Notebooks';
 import CartWidget from './Components/CartWidget';
 import Error from './Components/Error';
+import ItemDetailContainer from './Components/ItemDetailContainer';
 
 
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter className='App'>
-        <NavBar />
+      <BrowserRouter>
+          <NavBar />
           <Routes>
             
-            <Route path='/' element={ <ItemListContainer greeting={"Bienvenido Humano al proyecto React 👽"} /> }/>
-            <Route path='celulares' element={ <Celulares /> } />
-            <Route path='computadoras' element={ <Computadoras /> } />
-            <Route path='notebooks' element={ <Notebooks /> } />
-            <Route path='cart' element={ <CartWidget /> } />
+            <Route path={'/'} element={ <ItemListContainer /> } />
+            <Route path={'/category/:category'} element={ <ItemListContainer /> } />
+            <Route path={'/item/:id'} element={ <ItemDetailContainer /> } />
 
-            <Route path='*' element={ <Error /> } />
+            <Route path={'cart'} element={ <CartWidget /> } />
+
+            <Route path={'*'} element={ <Error /> } />
 
             <Route />
           </Routes>
