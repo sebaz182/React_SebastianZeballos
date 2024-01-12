@@ -7,7 +7,6 @@ import CartWidget from './Components/CartWidget';
 import Error from './Components/Error';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 
-
 function App() {
   return (
     <div className='App'>
@@ -16,7 +15,7 @@ function App() {
           <Routes>
             
             <Route path={'/'} element={ <ItemListContainer /> } />
-            <Route path={'/category/:category'} element={ <ItemListContainer /> } />
+            <Route path={'/category/:id'} element={ <ItemListContainer /> } />
             <Route path={'/item/:id'} element={ <ItemDetailContainer /> } />
 
             <Route path={'cart'} element={ <CartWidget /> } />

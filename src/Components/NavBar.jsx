@@ -14,10 +14,12 @@ function NavBar() {
                 <Container>
                     <Link to="/"> <Logo/> </Link>
                     <Nav className="me-auto">
-                        <Link to="/category/computadoras">Computadoras</Link>
-                        <Link to="/category/notebooks">Notebooks</Link>
-                        <Link to="/category/celulares">Celulares</Link>
-                        <Link to="/cart"> < CartWidget/> 1 </Link>
+                        <Nav.Link as={Link} to="/category/computadoras">Computadoras</Nav.Link>
+                        <Nav.Link as={Link} to="/category/notebooks">Notebooks</Nav.Link>
+                        <Nav.Link as={Link} to="/category/celulares">Celulares</Nav.Link>
+                        <nav>
+                            <Nav.Link as={Link} to="/cart">< CartWidget/></Nav.Link>
+                        </nav>
                     </Nav>
                 </Container>
             </Navbar>

@@ -1,0 +1,28 @@
+.navbar {
+    background-color: transparent !important;
+    border-bottom-style: double;
+    border-bottom-color: aliceblue;
+}
+
+.navbar-nav{
+    padding-left: 3% !important;
+}
+
+.navbar-toggler {
+    border-color: white;
+    padding: 0 !important;
+}
+
+.nav-item a {
+    color: aliceblue !important;    
+    text-decoration: none !important;
+}
+
+.navbar li{    
+    margin-right: 10% !important;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: blanchedalmond;
+}
