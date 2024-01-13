@@ -1,0 +1,15 @@
+.itemCart{
+    margin: 25px;
+}
+
+.img-fluid{
+    height: 200px;
+    width: 200px;
+}
+
+.cart-empti{
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50vh;
+}

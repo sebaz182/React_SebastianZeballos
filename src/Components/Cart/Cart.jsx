@@ -2,18 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
+import './Cart.css'
 
 
 const Cart = () => {
     const { cart, totalPrice } = useCartContext();
+    const { clearCart } = useCartContext();
 
 
     if (cart.length === 0) {
         return (
-            <>
-                <p>No hay elementos en el carrito</p>
-                <Link to="/">Hacer compras</Link>
-            </>
+            <div className='cart-empti'>
+                <h2 className='info'>No hay elementos en el carrito</h2>
+                <Link to="/">
+                    <button className="btn-total">Realizar compra</button>
+                </Link>
+            </div>
         );
     }
 
@@ -22,12 +26,18 @@ const Cart = () => {
             {cart.map((product) => (
                 <ItemCart key={product.id} product={product} />
             ))}
-            <p>total: $ {totalPrice()}</p>
+            <h2 className='total'>Total: $ {totalPrice()}</h2>
 
             <Link to="/checkout">
                 {' '}
-                <button className="btn-total">Finalizar Compra</button>
+                <button className="btn-final btn-total">Finalizar Compra</button>
             </Link>
+            
+            <Link to="/">
+                {' '}
+                <button className="btn btn-danger" onClick={() => clearCart()}>Vaciar Carrito</button>
+            </Link>
+            
         </>
     );
 };

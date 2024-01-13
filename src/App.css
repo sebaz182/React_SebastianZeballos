@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
 }
 
 li {
@@ -28,28 +29,4 @@ body {
     min-height: 100%;
 }
 
-footer{
-    margin-top: auto;
-}
-
-/* --- FOOTER --- */
-
-.footer {
-    background-color: black;
-    color: white;
-    padding: 10px;
-}
-
-.footer div div h2 {
-    font-size: 15px;
-    font-weight: 200;
-    text-align: center;
-}
-
-.itemListContainer {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
