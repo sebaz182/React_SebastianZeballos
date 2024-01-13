@@ -1,5 +1,5 @@
 # BAS Tecnologia
-Proyecto de e-commerce realizado en ReactJS intefrado con firebase.
+Proyecto de e-commerce realizado en ReactJS integrado con firebase.
 
 
 # React + Vite
